@@ -1,4 +1,6 @@
 const Patient = require('../Models/Patient')
+const {UploadOnCloudinary} = require('../utils/cloudinary')
+const streamifier = require('streamifier');
 
 
 const PatientAboutPage = async(req,res) => {
@@ -15,27 +17,43 @@ const PatientRecords = async(req,res) => {
                         })
 }
 
-const AddPrescription = async(req,res) => {
-    const {dname,rfc,find,pres,dte,upld} = req.body
-
-    if(!dname || !rfc || !find || !pres || !dte || !upld){
-        return res.status(400).json({ success: false, message: "Required fields are missing" })
+const AddPrescription = async (req, res) => {
+    const { email , pid , dname, rfc, find, pres, dte } = req.body;
+  
+    if (!dname || !rfc || !find || !pres || !dte) {
+      return res.status(400).json({ success: false, message: "Required fields are missing" });
     }
-
-    const newPrescription = {
-            doctorName:dname,
-            reasonForCheckup:rfc,
-            findings:find,
-            prescriptions:pres,
-            dateOfDoctorVisit:dte,
-            uploadPicture:upld    
+  
+    try {
+      // Check if a file is included in the request
+  console.log(req.body);
+  console.log(req.file);
+      if (!req.file) {
+        return res.status(400).json({ success: false, message: "No file uploaded" });
+      }
+  
+      // Upload the file to Cloudinary
+      const uploadResult = await UploadOnCloudinary(req.file.path);
+  
+      if (!uploadResult) {
+        return res.status(500).json({ success: false, message: "Failed to upload image" });
+      }
+  
+      const newPrescription = {
+        doctorName: req.body.dname,
+        reasonForCheckup: req.body.rfc,
+        findings: req.body.find,
+        prescriptions: req.body.pres,
+        dateOfDoctorVisit: req.body.dte,
+        uploadPicture: uploadResult.secure_url // Store the Cloudinary URL
+      };
+  
+      req.patient.prescriptions.push(newPrescription);
+      await req.patient.save();
+  
+      res.status(200).json({ success: true, message: "Prescription added successfully", prescription: newPrescription });
+    } catch (error) {
+      res.status(500).json({ success: false, message: error.message });
     }
-
-    req.patient.prescriptions.push(newPrescription)
-
-    await req.patient.save();
-
-    res.status(200).json({ success: true, message: "Prescription added successfully", prescription: newPrescription });
-}
-
+  };
 module.exports = {AddPrescription,PatientAboutPage,PatientRecords}
