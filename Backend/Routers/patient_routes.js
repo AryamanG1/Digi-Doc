@@ -1,5 +1,4 @@
 const express = require("express");
-const upload = require('../Middleware/multer')
 const pAuth = require('../Middleware/login_patient')
 
 const router1 = express.Router()
@@ -7,6 +6,6 @@ const {AddPrescription,PatientAboutPage,PatientRecords} = require('../Controller
 
 router1.get('/about',pAuth,PatientAboutPage);
 router1.get('/records',pAuth,PatientRecords);
-router1.post('/add',pAuth,upload.single('image'),AddPrescription);
+router1.post('/add',pAuth,AddPrescription);
 
 module.exports = router1;
