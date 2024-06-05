@@ -1,6 +1,8 @@
 const Patient = require('../Models/Patient')
 
 
+
+
 const PatientAboutPage = async(req,res) => {
     res.status(200).json({DOB:req.patient.dob,email:req.patient.email,phone:req.patient.phone,locate:req.patient.location})
 }

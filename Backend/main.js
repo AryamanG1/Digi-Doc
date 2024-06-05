@@ -8,13 +8,17 @@ dotenv.config();
 const app = express()
 
 const patient_router = require('../Backend/Routers/patient_routes');
+const doctor_router = require('../Backend/Routers/doctor_routes');
+const home_router = require('../Backend/Routers/home_routes');
 
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 
-app.use('/home/profile',patient_router);
+app.use('/patient',patient_router);
+app.use('/doctor',doctor_router);
+app.use('/home',home_router);
 
 app.use(notfoundmiddleware)
 app.use(errorHandlermiddleware)
