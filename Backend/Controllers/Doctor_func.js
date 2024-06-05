@@ -1,3 +1,11 @@
+// ** IMP , before accessing any of these all the queries will pass through an authentication , requiring the DOCTOR ID as well as the DOCTOR's EMAIL ID
+
+// In this file we will be defining all of the doctor functionalities
+// We are mainly defining three functionalities here consisting of 
+// --> Viewing the home page of the doctor
+// --> Viewing details of a given patient
+// --> Adding an prescription for the patients record
+
 const Patient = require('../Models/Patient')
 
 

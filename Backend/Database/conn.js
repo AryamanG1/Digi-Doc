@@ -1,3 +1,6 @@
+// Here we are establishing the connection with the database on our MongoDB server using Mongoose 
+
+
 const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 

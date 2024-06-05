@@ -1,3 +1,5 @@
+// This is an extra file which initially we planned on using to use multer to store an image on the diskStorage and then sending it to cloudinary as storage
+//**FOR REFERENCE
 const multer = require("multer");
 
 const storage = multer.diskStorage({

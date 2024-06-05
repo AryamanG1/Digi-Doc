@@ -1,3 +1,7 @@
+// This file contains the material for authorization of the patient using two criterions using the patient's email and patient id
+// It is an middleware
+
+
 const Patient = require('../Models/Patient');
 const connectDB = require('../Database/conn')
 

@@ -1,3 +1,6 @@
+// The basic schematic of the documents stored in the Doctors collection of MongoDB
+
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

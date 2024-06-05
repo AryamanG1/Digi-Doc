@@ -1,3 +1,7 @@
+// This is another extended utility for adding an image to the mongodb by using cloudinary service
+
+
+
 const cloudinary = require('cloudinary').v2;
 const fs = require('fs')
 

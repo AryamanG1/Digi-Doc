@@ -1,6 +1,12 @@
+// ** IMP , before accessing any of these all the queries will pass through an authentication , requiring the patientID as well as the patient email id 
+
+// In this file we will be defining all of the patient functionalities
+// We are mainly defining three functionalities here consisting of 
+// --> Viewing the about page 
+// --> Viewing some previous records 
+// --> Adding the prescription
+
 const Patient = require('../Models/Patient')
-
-
 
 
 const PatientAboutPage = async(req,res) => {
@@ -16,6 +22,7 @@ const PatientRecords = async(req,res) => {
                          prescriptions:req.patient.prescriptions,
                         })
 }
+
 
 const AddPrescription = async (req, res) => {
     const { email , pid , dname, rfc, find, pres, dte , url} = req.body;
