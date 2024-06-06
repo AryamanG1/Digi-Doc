@@ -296,6 +296,8 @@ Once the server is running, you can use tools like Postman or cURL to interact w
     }
     ```
 
+## Contributing
 
+We welcome contributions to improve Digi-Doc. Please fork the repository and create a pull request with your changes. Ensure your code follows the project's coding standards and includes relevant tests.
 
 
