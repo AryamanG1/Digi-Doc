@@ -1,0 +1,772 @@
+/* src/styles.css */
+
+/* Reset styles */
+body, h1, h2, h3, p, ul, li, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  display: flex;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: 0 3rem; /* Added margin */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: royalblue;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 40px 0;
+}
+
+h1, h2, h3 {
+  color: royalblue;
+  margin-bottom: 20px;
+}
+
+button.book-appointment-btn {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button.book-appointment-btn:hover {
+  background-color: #003366;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: royalblue;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Additional margin and padding */
+section {
+  margin-bottom: 40px;
+}
+
+.doctor-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.doctor-card > div {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .doctor-card > div {
+    width: 100%;
+  }
+}
+/************************************/
+
+/* App.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.login-left,
+.login-right {
+  width: 50%;
+}
+
+.login-right-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.login-header h1 {
+  color: royalblue;
+}
+
+.pass-input-div {
+  position: relative;
+  width: 100%;
+}
+
+.pass-input-div input {
+  width: calc(100% - 40px);
+}
+
+.pass-input-div button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: royalblue;
+}
+
+.login-center-options {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-center-options .remember-div {
+  display: flex;
+  align-items: center;
+}
+
+.login-center-options .remember-div input {
+  margin-right: 10px;
+}
+
+.login-center-buttons {
+  width: 100%;
+}
+
+.login-center-buttons button {
+  padding: 10px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-bottom-p {
+  margin-top: 20px;
+}
+
+.login-bottom-p a {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.login-bottom-p a:hover {
+  text-decoration: underline;
+}
+/****************************************/
+.option-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.option-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #003366;
+}
+
+.option-link {
+  text-decoration: none;
+}
+/****************************************/
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: black;
+  --PRIMARY-COLOR: #34495e;
+  --COLOR:black;
+  --SECN-COLOR:#ecf0f1;
+  --ACCENT-COLOR: #e74c3c;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.doctor-page {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #34495e;
+  color: #000; /* Changed text color to black */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-profile-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  color: black;
+}
+
+.doctor-profile-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+}
+
+.left-column, .right-column {
+  
+  padding: 20px;
+  
+}
+
+.patient-history, .patient-actions {
+  margin-bottom: 10px;
+  
+  padding: 20px;
+}
+
+.patient-history input, .patient-actions input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--PRIMARY-COLOR);
+  background-color: var(--SECN-COLOR);
+  color: #000;
+}
+
+.patient-history button, .patient-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--ACCENT-COLOR);
+  color: white;
+  cursor: pointer;
+}
+
+.patient-history button:hover, .patient-actions button:hover {
+  background-color: var(--ACCENT-COLOR);
+}
+
+.patient-history-display {
+  display: flex;
+  gap: 20px;
+}
+
+.patient-history-display ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.patient-history-display li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.patient-history-display li:last-child {
+  border-bottom: none;
+}
+
+.patient-details-history{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 7rem;
+}
+.right-column{
+  margin-left: 7rem;
+}
+.patient-history-column,
+.patient-details-column{
+  width: 50%; 
+  padding: 0;
+}
+.patient-actions,
+.patient-history{
+  margin: 0;
+  padding: 0;
+}
+/**************************************************************/
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #000000;
+}
+.App{
+display: flex;
+flex-direction: row;
+}
+/* Layout */
+main {
+  display: flex;
+  
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background-color: #34495e;
+  color: #ecf0f1; /* Correct text color */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Set a higher z-index for the sidebar */
+}
+
+.sidebar-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar-box img {
+  border-radius: 50%;
+  border: 3px solid #ecf0f1;
+}
+
+.info-content {
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 1.5em;
+  color: #ecf0f1;
+}
+
+.title {
+  font-size: 1.2em;
+  color: #bdc3c7;
+}
+
+.info_more-btn {
+  background-color: #e74c3c;
+  color: #ecf0f1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info_more-btn:hover {
+  background-color: #c0392b;
+}
+
+.contacts-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon-box {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #2c3e50;
+  border-radius: 50%;
+}
+
+.icon-box ion-icon {
+  color: #ecf0f1;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-title {
+  font-weight: bold;
+  color: #ecf0f1;
+  margin: 0;
+}
+
+.contact-link {
+  color: #ecf0f1;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-title, address, time {
+  color: #ecf0f1;
+}
+
+/* Targeting specific text elements inside the sidebar */
+.sidebar .contact-title,
+.sidebar address,
+.sidebar time {
+  color: #ecf0f1; /* Correct text color */
+}
+
+.sidebar .contact-link {
+  color: #ecf0f1; /* Correct link color */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ecf0f1;
+  z-index: 1; /* Lower z-index than sidebar */
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.main-content {
+  padding-top: 60px; /* Add padding top to compensate for the fixed navbar */
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center; /* Align items vertically */
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+  background-color: #e74c3c;
+}
+
+/* CSS for "View" button */
+.view-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+  background-color: #2980b9;
+}
+
+/* CSS for tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Content Sections */
+article {
+  display: none;
+}
+
+article.active {
+  display: block;
+}
+
+.medical-history,
+.prescriptions,
+.appointments,
+.contact-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #333; /* Darker text color for better readability */
+  line-height: 1.5;
+}
+
+.about-text .intro p {
+  margin: 0 0 10px; /* Smaller gap between paragraphs */
+}
+
+.about-text ol {
+  margin: 10px 0 0 20px; /* Adjusted margins */
+  padding: 0;
+}
+
+.about-text li {
+  margin-bottom: 8px; /* Smaller gap between list items */
+}
+
+.features-list ol {
+  margin-left: 20px;
+}
+
+.note {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555; /* Slightly lighter but still dark for emphasis */
+}
+
+/* Contact Section */
+.contact {
+  padding: 20px;
+  background-color: #ecf0f1;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+#prescriptionForm {
+  margin-top: 20px;
+}
+
+#prescriptionForm div {
+  margin-bottom: 10px;
+}
+
+#prescriptionForm label {
+  display: block;
+  font-weight: bold;
+}
+
+#prescriptionForm input[type="text"],
+#prescriptionForm textarea,
+#prescriptionForm input[type="date"],
+#prescriptionForm input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+#prescriptionForm button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#prescriptionForm button:hover {
+  background-color: #2980b9;
+}
+
+/* Hide the form initially */
+#prescriptionForm {
+  display: none;
+}
+
+.add-prescription button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-prescription button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Use relative positioning */
+  width: 100%;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.footer h2 {
+  color: #e74c3c;
+}
+
+.footer p,
+.footer address {
+  margin: 0;
+  color: #ecf0f1;
+}
+
+.map-section {
+  width: 40%; /* Adjust width for desired map size */
+  height: 200px; /* Adjust height for desired map size */
+  overflow: hidden; /* Hide overflowing map content */
+  border-radius: 10px; /* Add a rounded border to the map section */
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-us {
+  flex: 2; /* Make contact info take up more space */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Responsive styles for smaller screens */
+  .footer {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text */
+  }
+
+  .contact-us,
+  .map-section {
+      width: 100%; /* Full width */
+      margin-bottom: 10px; /* Add spacing */
+  }
+}

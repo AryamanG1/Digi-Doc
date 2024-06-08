@@ -1,11 +1,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const errorHandlermiddleware = require('../Backend/Middleware/error-handler')
 const notfoundmiddleware = require('../Backend/Middleware/not-found')
 dotenv.config();
 
 
 const app = express()
+
+app.use(cors());
 
 const patient_router = require('../Backend/Routers/patient_routes');
 const doctor_router = require('../Backend/Routers/doctor_routes');
@@ -24,5 +27,5 @@ app.use(notfoundmiddleware)
 app.use(errorHandlermiddleware)
 
 app.listen(process.env.PORT,(req,res) => {
-    console.log("Succesfully listening on port 500");
+    console.log("Succesfully listening on port 5000");
 })

@@ -4,8 +4,8 @@ const {addPrescription,DoctorHomePage,ViewPatient} = require('../Controllers/Doc
 
 const router2 = express.Router()
 
-router2.get('/home',dAuth,DoctorHomePage);
-router2.get('/view',dAuth,ViewPatient);
+router2.post('/home',dAuth,DoctorHomePage);
+router2.post('/view',ViewPatient);
 router2.post('/add',dAuth,addPrescription);
 
 

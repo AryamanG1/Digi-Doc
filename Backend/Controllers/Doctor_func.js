@@ -7,6 +7,7 @@
 // --> Adding an prescription for the patients record
 
 const Patient = require('../Models/Patient')
+const connectDB = require('../Database/conn')
 
 
 const DoctorHomePage = async(req,res) => {
@@ -17,10 +18,15 @@ const DoctorHomePage = async(req,res) => {
 }
 
 const ViewPatient = async(req,res) => {
+    console.log('Entered function successfully');
+    let conn = await connectDB()
+    console.log('database connected successfully');
     const {pid} = req.body;
+    console.log(pid);
     
     try {
         const patient = await Patient.findOne({patientId:req.body.pid})
+        console.log(patient);
         if(!patient){
             console.log("invalid patient id entered");
             return res.status(401).json({success: true , data : []})
